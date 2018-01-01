@@ -1,0 +1,6 @@
+info:
+  name: 测试中心
+  contact: 测试中心
+
+server:
+  port: 9889
