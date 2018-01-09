@@ -11,7 +11,7 @@ spring:
   profiles:
     active: prod2
 
-
+#profile数组 ---
 ---
 spring:
   profiles: dev
@@ -26,13 +26,18 @@ eureka:
     # eureka server地址
     serviceUrl:
       defaultZone: http://127.0.0.1:8761/eureka/
-    eureka-server-port:
   server:
     waitTimeInMsWhenSyncEmpty: 0
     # false 关闭自我保护，不管如何都要剔除心跳检测异常的服务
     enableSelfPreservation: false
+    #服务踢除时间(默认60000ms)
+    eviction-interval-timer-in-ms: 60000
   instance:
     hostname: eureka1
+    #实例心跳时间(默认30s)
+    lease-renewal-interval-in-seconds: 30
+    #超过上次心跳30s 认为宕机(默认90s)
+    lease-expiration-duration-in-seconds: 30
 ---
 spring:
   profiles: prod2
