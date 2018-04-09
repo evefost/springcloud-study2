@@ -21,11 +21,6 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!-- spring-boot-starter-actuator 管理工具/web 查看堆栈，动态刷新配置 -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>
@@ -34,18 +29,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-sleuth</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-zipkin</artifactId>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-        <!--<groupId>org.springframework.cloud</groupId>-->
-        <!--<artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
-        <!--</dependency>-->
+
+        <!-- spring-boot-starter-actuator 管理工具/web 查看堆栈，动态刷新配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
 
         <!-- 日志格式化组件 -->
        <dependency>

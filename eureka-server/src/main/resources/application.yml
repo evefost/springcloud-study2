@@ -9,7 +9,7 @@ management:
     
 spring:
   profiles:
-    active: prod2
+    active: dev
 
 #profile数组 ---
 ---
@@ -18,10 +18,11 @@ spring:
 server:
   port: 8761
 eureka:
+  #作为客户端(每个服都可以看作消费端和服务端)
   client:
     # 是否注册到eurekaserver
     registerWithEureka: true
-    # 是否拉取信息
+    # 是否拉注册取信息
     fetchRegistry: false
     # eureka server地址
     serviceUrl:
@@ -32,6 +33,8 @@ eureka:
     enableSelfPreservation: false
     #服务踢除时间(默认60000ms)
     eviction-interval-timer-in-ms: 60000
+    #eureka 集群刷新间隔
+    peer-eureka-nodes-update-interval-ms: 10000
   instance:
     hostname: eureka1
     #实例心跳时间(默认30s)

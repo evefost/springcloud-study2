@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>org.springframework.cloud</groupId>
 		<artifactId>spring-cloud-starter-parent</artifactId>
-		<version>Dalston.SR1</version>
+		<version>Dalston.SR3</version>
 		<relativePath />
 	</parent>
 	<groupId>com.dongnaoedu.springcloud</groupId>
@@ -16,7 +16,7 @@
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
-				<version>Dalston.SR1</version>
+				<version>Dalston.SR3</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -24,38 +24,23 @@
 	</dependencyManagement>
 
 	<dependencies>
-		<!-- spring-boot-starter-web web项目，集成容器tomcat -->
+
+		<!-- cloud config组件 配置中心 -->
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<!--用于连接到eureka注册中的组件-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 		<!-- spring-boot-starter-actuator 管理工具/web 查看堆栈，动态刷新配置 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka</artifactId>
-		</dependency>
-		<!-- spring-boot-starter-security -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-security</artifactId>
-		</dependency>
-		<!-- cloud config组件 配置中心 -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-config-server</artifactId>
-		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-starter-bus-amqp</artifactId>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud</groupId>-->
-			<!--<artifactId>spring-cloud-config-monitor</artifactId>-->
-		<!--</dependency>-->
+
 		<!-- 日志格式化组件 -->
 		<dependency>
 			<groupId>net.logstash.logback</groupId>

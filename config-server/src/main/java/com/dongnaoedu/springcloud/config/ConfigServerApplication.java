@@ -16,6 +16,7 @@ public class ConfigServerApplication {
 	final static Logger logger = LoggerFactory.getLogger(ConfigServerApplication.class);
 
 	public static void main(String[] args) {
+
 		ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(ConfigServerApplication.class)
 				.web(true).run(args);
 		logger.debug(applicationContext.getId() + "已经启动,当前host：{}",
