@@ -12,7 +12,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 @EnableEurekaClient
-
 @EnableFeignClients(basePackages = {"com.xie.java.api.service"},defaultConfiguration=FeignClientsConfiguration.class)
 
 public class UAAApplication {

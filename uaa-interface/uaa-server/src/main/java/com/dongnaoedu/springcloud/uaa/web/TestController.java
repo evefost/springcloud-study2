@@ -1,15 +1,14 @@
 package com.dongnaoedu.springcloud.uaa.web;
 
-import com.dongnaoedu.springcloud.uaa.db.UserDomain;
 import com.xie.java.api.bo.ComposeBo;
 import com.xie.java.api.bo.TestBo;
 import com.xie.java.api.service.TestService;
 import com.xie.java.api.vo.TestVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +20,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/test")
 public class TestController {
+
+
+    @Autowired
+    DiscoveryClient discoveryClient;
 
     @Autowired
     TestService testService;

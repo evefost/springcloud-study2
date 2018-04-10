@@ -2,5 +2,3 @@ info:
   name: 用户中心
   contact: 用户中心
 
-server:
-  port: 9004

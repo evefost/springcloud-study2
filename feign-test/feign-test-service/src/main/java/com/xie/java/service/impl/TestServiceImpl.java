@@ -6,7 +6,6 @@ import com.xie.java.api.bo.TestBo;
 import com.xie.java.api.service.TestService;
 import com.xie.java.api.vo.TestVo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;

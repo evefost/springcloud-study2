@@ -1,11 +1,17 @@
+server:
+  port: 9004
+
 eureka:
+  #配置连接eureka注册中心的客户端，用于注册当前服务，拉取服务列表，发布服务心跳请求到eureka注册中心
   client:
+    # 是否
     registerWithEureka: true
     fetchRegistry: true
     # 服务列表缓存更新时间
     registryFetchIntervalSeconds: 10
     serviceUrl:
       defaultZone: ${eureka_serviceUrl:http://127.0.0.1:8761/eureka/}
+  #普通服务实例信息配置
   instance:
     # 心跳间隔
     leaseRenewalIntervalInSeconds: 10
@@ -17,6 +23,7 @@ spring:
   cloud:
     client:
       hostname: ${HOSTNAME:localhost}
+    #访问配置中心的配置信息
     config:
       discovery:
         # 使用eureka发现配置中心服务

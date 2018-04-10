@@ -43,4 +43,6 @@ eureka:
     # 心跳间隔
     leaseRenewalIntervalInSeconds: 10
     hostname: ${HOSTNAME:localhost}
+
+
   
